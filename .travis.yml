@@ -6,4 +6,4 @@ before_install:
   - docker build -t shakils/react-aws -f Dockerfile.dev .
 
 script:
-  - docker run shakils/react-aws npm run test -- --coverage
+  - docker run -e CI=true shakils/react-aws npm run test
